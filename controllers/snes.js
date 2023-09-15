@@ -4,7 +4,7 @@ const router = express.Router()
 const Snes = require('../models/snes')
 
 router.get('/new', (req, res) => {
-    res.send('new')
+    res.render('new.ejs')
 })
 
 module.exports = router 
