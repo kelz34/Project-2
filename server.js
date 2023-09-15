@@ -26,6 +26,11 @@ db.on('disconnected', () => { console.log('mongo discon nected')})
 // import controller
 const snesController = require('./controllers/snes.js')
 
+// MIDDLEWARE 
+// this will parse the data create to "req.body object"
+app.use(express.urlencoded({ extended: true }))
+
+
 // snes 
 app.use('/snes', snesController)
 // here we are telling the app
