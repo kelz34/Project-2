@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <nav>
+        <a href="/snes/new">Create a New Game</a>
+    </nav>
+    <h1>Retro Games Classic</h1>
+    <ul>
+       
+        <% for (let i = 0; i < snes.length; i++) { %>
+            <li>
+            The
+            <a href="/snes/<%=snes[i].id %>">
+                <%=snes[i].title %>
+            </a>
+            is <%=snes[i].genre %>.
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>
