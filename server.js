@@ -1,8 +1,14 @@
 
 // IMPORTS
 const express = require('express')
+const methodOverride = require('method-override')
 const app = express()
 // const PORT = 3000
+
+// MIDDLEWARE 
+// this will parse the data create to "req.body object"
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 
 require('dotenv').config()
 const PORT = process.env.PORT || 3000
@@ -26,9 +32,6 @@ db.on('disconnected', () => { console.log('mongo discon nected')})
 // import controller
 const snesController = require('./controllers/snes.js')
 
-// MIDDLEWARE 
-// this will parse the data create to "req.body object"
-app.use(express.urlencoded({ extended: true }))
 
 
 // snes 

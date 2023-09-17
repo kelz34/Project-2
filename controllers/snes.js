@@ -16,10 +16,18 @@ router.get('/', async (req, res) => {
     })
 })
 
-
+ 
 // NEW ROUTE to render "new.ejs"
 router.get('/new', (req, res) => {
     res.render('new.ejs')
+})
+
+// EDIT ROUTE to render "edit.ejs"
+router.get('/:id/edit', async (req, res) => {
+    const foundSnes = await Snes.findById(req.params.id)
+    res.render('edit.ejs', {
+        snes: foundSnes
+    })
 })
 
 // SHOW ROUTE to render "show.ejs" -- info about JUST ONE SNES
@@ -43,7 +51,20 @@ try {
     console.log(err)
     res.status(500).send(err)
 }
+})
 
+// PUT ROUTE - "Edit a game"
+router.put('/:id', async (req, res) => {
+    console.log(req.params.id)
+    const updatedSnes = await Snes.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    res.redirect('/snes/' + updatedSnes.id)
+})
+
+// DELETE ROUTE "Delete"
+router.delete('/:id', async (req, res) => {
+    const snes = await Snes.findByIdAndDelete(req.params.id)
+    console.log(`Deleted snes: ${snes}`)
+    res.redirect('/snes')
 })
 
 module.exports = router 

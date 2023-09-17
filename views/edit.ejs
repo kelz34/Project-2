@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SNES Edit Page</h1>
+    <form action="/snes/<%=snes.id %>?_method=PUT" method="POST">
+        Title: <input type="text" name="title"/><br/>
+        img: <input type="text" name="img"/><br/>
+        Genre: <input type="text" name="genre"/><br/>
+        Developer: <input type="text" name="developer"/><br/>
+        Rating: <input type="text" name="rating"/><br/>
+        Year: <input type="text" name="year"/><br/>
+        <input type="submit" value="Edit A Game">
+    </form>
+</body>
+</html>
