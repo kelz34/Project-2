@@ -55,9 +55,15 @@ try {
 
 // PUT ROUTE - "Edit a game"
 router.put('/:id', async (req, res) => {
-    console.log(req.params.id)
-    const updatedSnes = await Snes.findByIdAndUpdate(req.params.id, req.body, {new: true})
-    res.redirect('/snes/' + updatedSnes.id)
+    try {
+        console.log(req.params.id)
+        const updatedSnes = await Snes.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        res.redirect('/snes/' + updatedSnes.id)
+    } catch (err) {
+        console.log('ERROR IN EDIT: ', err)
+        res.status(500).send(err)
+    }
+    
 })
 
 // DELETE ROUTE "Delete"

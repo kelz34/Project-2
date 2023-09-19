@@ -18,7 +18,7 @@ Snes.create([
     },
     {
         title: 'Super Metroid',
-        img: 'https://upload.wikimedia.org/wikipedia/en/e/e4/Smetroidbox.jpg',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHDP2RgSH7QNkBFisY6QNGG6DwgJhJl_KRrg&usqp=CAU',
         genre: 'Action',
         developer: 'Nintendo',
         rating: 8.7,

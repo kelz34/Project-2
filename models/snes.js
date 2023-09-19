@@ -2,11 +2,11 @@ const mongoose = require('mongoose')
 
 const snesSchema = new mongoose.Schema ({
     title: { type: String, required: true },
-    img: { type: String },
+    img: { type: String, required: true },
     genre: { type: String, required: true },
     developer: { type: String, required: true },
     rating: Number,
-    year: { type: Date }
+    year: Number
 })
 
 // create snes model 

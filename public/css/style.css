@@ -1,0 +1,16 @@
+body {
+    background-image: url("https://us.123rf.com/450wm/gorro/gorro2101/gorro210100025/162717140-colorful-simple-vector-illustration-in-retro-futurism-style-of-headline-signboard-text-retro-game.jpg?ver=6");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    font-family: comic sans ms, sans-serif;
+}
+
+p {
+    color: white;
+}

@@ -27,7 +27,7 @@ const db = mongoose.connection
 // optional create status messages to check mongo connection 
 db.on('error', (err) => { console.log('ERROR: ' , err)})
 db.on('connected', () => { console.log('mongo connected')})
-db.on('disconnected', () => { console.log('mongo discon nected')})
+db.on('disconnected', () => { console.log('mongo disconnected')})
 
 // import controller
 const snesController = require('./controllers/snes.js')

@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
+<%- include('./partials/header.ejs') %>
     <h1>SNES Games Page</h1>
-    The <%=snes.title %> is <%=snes.genre %>.
+    <p><%=snes.title %> </p>
+    <p><%=snes.img %></p>
+    <p><%=snes.genre %></p>
+    <p><%=snes.developer %></p>
+    <p><%=snes.rating %></p>
+    <p><%=snes.year %></p>
 <nav>
     <a href="/snes/<%=snes.id %>/edit">Edit</a>
-    <a href="/snes">Back to Game Page</a>
+
 </nav>
 </body>
 </html>
