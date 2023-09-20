@@ -1,13 +1,13 @@
 <%- include('./partials/header.ejs') %>
     <h1>SNES Games Page</h1>
-    <p><%=snes.title %> </p>
+    <p><span>Title:</span> <%=snes.title %> </p>
     <p><img class="images" src=<%=snes.img %> /></p>
-    <p><%=snes.genre %></p>
-    <p><%=snes.developer %></p>
-    <p><%=snes.rating %></p>
-    <p><%=snes.year %></p>
+    <p> <span>Genre:</span> <%=snes.genre %></p>
+    <p> <span>Developer:</span> <%=snes.developer %></p>
+    <p> <span>Rating:</span> <%=snes.rating %></p>
+    <p> <span>Year:</span> <%=snes.year %></p>
 <nav>
-    <a href="/snes/<%=snes.id %>/edit">Edit</a>
+    <a class="header" href="/snes/<%=snes.id %>/edit">Edit</a>
 
 </nav>
 </body>
