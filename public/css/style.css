@@ -9,8 +9,35 @@ body {
 h1 {
     color: white;
     font-family: comic sans ms, sans-serif;
+    text-align: center;
+    font-size: 80px;
 }
 
 p {
     color: white;
+}
+
+.labels {
+    color: white;
+    font-size: x-large;
+    
+}
+
+.images {
+    padding: 5px;
+    max-width: 30%;
+    max-height: 30%;
+}
+
+ul {
+   list-style: none;
+    columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  /* padding: 10px; */
+    /* justify-content: space-between; */
+}
+
+li {
+    justify-content: space-between;
 }

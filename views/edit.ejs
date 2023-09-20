@@ -1,6 +1,6 @@
 <%- include('./partials/header.ejs') %>
     <h1>SNES Edit Page</h1>
-    <form action="/snes/<%=snes.id %>?_method=PUT" method="POST">
+    <form class="labels" action="/snes/<%=snes.id %>?_method=PUT" method="POST">
         Title: <input type="text" name="title"/><br/>
         img: <input type="text" name="img"/><br/>
         Genre: <input type="text" name="genre"/><br/>
