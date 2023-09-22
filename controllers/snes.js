@@ -68,9 +68,19 @@ router.put('/:id', async (req, res) => {
 
 // DELETE ROUTE "Delete"
 router.delete('/:id', async (req, res) => {
-    const snes = await Snes.findByIdAndDelete(req.params.id)
-    console.log(`Deleted snes: ${snes}`)
-    res.redirect('/snes')
+    try {
+        const snes = await Snes.findByIdAndDelete(req.params.id)
+        console.log(`Deleted snes: ${snes}`)
+        res.redirect('/snes')
+    } catch (err) {
+        console.log(err)
+        res.send(err)
+        res.status(500).send(err)
+    }
+    
+    // const snes = await Snes.findByIdAndDelete(req.params.id)
+    // console.log(`Deleted snes: ${snes}`)
+    // res.redirect('/snes')
 })
 
 module.exports = router 
