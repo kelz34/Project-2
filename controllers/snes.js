@@ -74,7 +74,6 @@ router.delete('/:id', async (req, res) => {
         res.redirect('/snes')
     } catch (err) {
         console.log(err)
-        res.send(err)
         res.status(500).send(err)
     }
     
