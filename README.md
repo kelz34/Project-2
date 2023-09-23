@@ -1,9 +1,9 @@
 Wireframes:
-https://media.git.generalassemb.ly/user/49417/files/a17631ea-0df3-4ebc-9593-8e19b90da01b
+![Alt text](image.png)
 
-https://media.git.generalassemb.ly/user/49417/files/fe6bd396-44e4-4886-b40b-ce75bb0133eb
+![Alt text](image-1.png)
 
-https://media.git.generalassemb.ly/user/49417/files/5a4339e3-a5bd-4bd5-85e9-a0dbb4fbac9a
+![Alt text](image-2.png)
 
 User Stories:
 - User selects console of choice to find desired game
